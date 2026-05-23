@@ -20,9 +20,9 @@ spec:
       containers:
         - name: backend
 
-          image: backend-login:v1
+          image: 072025753815.dkr.ecr.us-east-1.amazonaws.com/backend-login:latest
 
-          imagePullPolicy: Never
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 3000
