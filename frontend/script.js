@@ -29,7 +29,9 @@ async function login() {
 
         if (response.ok) {
             message.innerText =
-                "✅ Login exitoso";
+                "✅ Login exitoso";    
+            document.querySelector(".login-container").style.display = "none";
+            document.getElementById("gallery-container").style.display = "block";    
         } else {
             message.innerText =
                 "❌ Usuario o contraseña incorrectos";
