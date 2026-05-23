@@ -91,3 +91,29 @@ http://<elb-dns>.us-east-1.elb.amazonaws.com
 6. Deploy en Kubernetes  
 7. Exposición con LoadBalancer  
 8. Validación funcional  
+
+## 🚀 Flujo rápido de despliegue cada vez que cambio el FRONT:
+
+1. **Construir imágenes Docker**
+   ```bash
+   docker build -t backend ./backend
+   docker build -t frontend ./frontend
+   ```
+
+2. **Etiquetar imágenes para ECR**
+   ```bash
+   docker tag backend-login:v1 <ECR_URL>/backend-login:latest
+   docker tag frontend-login:v3 <ECR_URL>/frontend-login:latest
+   ```
+
+3. **Subir imágenes a ECR**
+   ```bash
+   docker push <ECR_URL>/backend-login:latest
+   docker push <ECR_URL>/frontend-login:latest
+   ```
+
+4. **Reiniciar despliegues en Kubernetes**
+   ```bash
+   kubectl rollout restart deployment backend
+   kubectl rollout restart deployment frontend
+   ```
