@@ -30,7 +30,7 @@ async function login() {
         if (response.ok) {
             message.innerText =
                 "✅ Login exitoso";    
-            document.querySelector(".login-container").style.display = "none";
+            document.getElementById("login-container").style.display = "none";
             document.getElementById("gallery-container").style.display = "block";    
         } else {
             message.innerText =
