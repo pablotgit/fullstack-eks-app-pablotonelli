@@ -31,7 +31,9 @@ async function login() {
             message.innerText =
                 "✅ Login exitoso";    
             document.getElementById("login-container").style.display = "none";
-            document.getElementById("gallery-container").style.display = "block";    
+            document.getElementById("gallery-container").style.display = "block";   
+            console.log("ENTRÉ AL LOGIN OK BLOCK");
+            console.log("gallery:", document.getElementById("gallery-container")); 
         } else {
             message.innerText =
                 "❌ Usuario o contraseña incorrectos";
