@@ -22,7 +22,7 @@ spec:
 
           image: 072025753815.dkr.ecr.us-east-1.amazonaws.com/frontend-login:latest
 
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 80
